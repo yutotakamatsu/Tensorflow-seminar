@@ -15,9 +15,9 @@ clf = LinearSVC()
 clf.fit(learn_data, learn_label)
 
 # テストデータによる予測 --- (*5)
-test_data = [[0,0], [1,1], [0,1], [1,0]]
+test_data = [[0,0], [1,1], [0,1], [1,1]]
 test_label = clf.predict(test_data)
 
 # 予測結果の評価 --- (*6)
 print(test_data , "の予測結果：" ,  test_label)
-print("正解率 = " , accuracy_score([0, 1, 0, 0], test_label))
+print("正解率 = " , accuracy_score([0, 0, 0, 1], test_label))
